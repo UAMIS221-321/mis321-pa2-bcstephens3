@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\12055\\.nuget\\packages\\": {}
+    "/Users/brandonstephens/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\12055\\Documents\\MIS321\\source\\repos\\mis321-pa2-bcstephens3\\mis321-pa2-bcstephens3.csproj",
+      "projectUniqueName": "/Users/brandonstephens/OneDrive/Documents/MIS321/source/repos/mis321-pa2-bcstephens3/mis321-pa2-bcstephens3.csproj",
       "projectName": "mis321-pa2-bcstephens3",
-      "projectPath": "C:\\Users\\12055\\Documents\\MIS321\\source\\repos\\mis321-pa2-bcstephens3\\mis321-pa2-bcstephens3.csproj",
-      "packagesPath": "C:\\Users\\12055\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\12055\\Documents\\MIS321\\source\\repos\\mis321-pa2-bcstephens3\\obj\\",
+      "projectPath": "/Users/brandonstephens/OneDrive/Documents/MIS321/source/repos/mis321-pa2-bcstephens3/mis321-pa2-bcstephens3.csproj",
+      "packagesPath": "/Users/brandonstephens/.nuget/packages/",
+      "outputPath": "/Users/brandonstephens/OneDrive/Documents/MIS321/source/repos/mis321-pa2-bcstephens3/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\12055\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/brandonstephens/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
       }
     }
   }
