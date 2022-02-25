@@ -9,29 +9,38 @@ namespace mis321_pa2_bcstephens3.Interphases
             //the current stuff
             
             Console.Clear();
+            System.Console.WriteLine("Player 1,");
             Character player1 = CharacterSelection.ChooseCharacter();
+            Console.Clear();
+            System.Console.WriteLine("Player 2,");
             Character player2 = CharacterSelection.ChooseCharacter();
+            Console.Clear();
+            System.Console.WriteLine("Player 1's Character Stats:\n");
             ToStringPl(player1);
             System.Console.WriteLine("");
+            System.Console.WriteLine("Player 2's Character Stats:\n");
             ToStringPl(player2);
             System.Console.WriteLine("");
-            System.Console.WriteLine("Player One, enter your name as a string (ex: Dan)");
+            System.Console.WriteLine("Player One, enter your name as a string (ex: Elizabeth)");
             player1.PlayersName = Console.ReadLine();
-            System.Console.WriteLine("Player Two, enter your name as a string (ex: Dan)");
+            System.Console.WriteLine(" ");
+            System.Console.WriteLine("Player Two, enter your name as a string (ex: Barbossa)");
             player2.PlayersName = Console.ReadLine();
-            Console.WriteLine("The game will decide who goes first.");
+            System.Console.WriteLine(" \n\n");
+            Console.WriteLine("The spirit of Poseidon will decide who attacks first.\n");
             int determineTurn = RandomUtility.WhoGoesFirst();
-            System.Console.WriteLine(determineTurn);
+            System.Console.WriteLine("Player " + determineTurn + " will begin this battle!\n");
+            System.Console.WriteLine("Press any key to begin the fight, matey!");
+            Console.ReadKey();
+            Console.Clear();
             while(player1.Health > 0 && player2.Health > 0)
             {
                 if(determineTurn == 1 && (player1.Health > 0 && player2.Health > 0))
                 {
+                    Console.Clear();
                     System.Console.WriteLine(" ");
-                    System.Console.WriteLine("Player 1's Turn");
-                    System.Console.WriteLine(" ");
-                    System.Console.WriteLine("You are attacking, "+ player1.PlayersName);
-                    System.Console.WriteLine("");
-                    // player2.Health = player2.Health - 20;
+                    System.Console.WriteLine("Player 1's Turn\n");
+                    System.Console.WriteLine("You are attacking, "+ player1.PlayersName + ".\n");
                     if(player1.Name == "Jack Sparrow")
                     {
                         player1.attackBehavior.Attack();
@@ -47,21 +56,17 @@ namespace mis321_pa2_bcstephens3.Interphases
                         player1.attackBehavior.Attack();
                         Sword.DamageCalculation(player1, player2, determineTurn);
                     }
-                    System.Console.WriteLine("Player 2's Health: " + player2.Health);
-                    System.Console.WriteLine(" ");
-                    System.Console.WriteLine("Press any key continue.");
+                    System.Console.WriteLine("Player 2's Health: " + player2.Health + "\n");
+                    System.Console.WriteLine("Press any key to continue.");
                     Console.ReadKey();
-
                     determineTurn = 2;
                 }
                 if(determineTurn == 2 && (player1.Health > 0 && player2.Health > 0))
                 {
+                    Console.Clear();
                     System.Console.WriteLine(" ");
-                    System.Console.WriteLine("Player 2's Turn");
-                    System.Console.WriteLine(" ");
-                    System.Console.WriteLine("You are attacking, "+ player2.PlayersName);
-                    System.Console.WriteLine("");
-                    // player1.Health = player1.Health - 20;
+                    System.Console.WriteLine("Player 2's Turn\n");
+                    System.Console.WriteLine("You are attacking, "+ player2.PlayersName + ".\n");
                     if(player2.Name == "Jack Sparrow")
                     {
                         player2.attackBehavior.Attack();
@@ -78,9 +83,8 @@ namespace mis321_pa2_bcstephens3.Interphases
                         Sword.DamageCalculation(player1, player2, determineTurn);
                     }
                     //player1.DamageCalculation(player1, player2, determineTurn);
-                    System.Console.WriteLine("Player 1's Health: " + player1.Health);
-                    System.Console.WriteLine(" ");
-                    System.Console.WriteLine("Press any key continue.");
+                    System.Console.WriteLine("Player 1's Health: " + player1.Health + "\n");
+                    System.Console.WriteLine("Press any key to continue.");
                     Console.ReadKey();
                     //CheckHealth(player1, player2);
                     determineTurn = 1;
@@ -118,19 +122,29 @@ namespace mis321_pa2_bcstephens3.Interphases
         
         public static void ToStringPl(Character player)
         {
-            Console.WriteLine("Character: " + player.Name + "\nMax Power: " + player.MaxPower + "\nHealth: " + player.Health +"\nAttack Strength: " + player.AttackStrength + "\nDefensive Power: " + player.DefensePower);
+            Console.WriteLine("    Character: " + player.Name + "\n    Max Power: " + player.MaxPower + "\n    Health: " + player.Health +"\n    Attack Strength: " + player.AttackStrength + "\n    Defensive Power: " + player.DefensePower);
         }
 
         static double CheckHealth(Character player1, Character player2)
         {
             if(player1.Health <= 0)
             {
-                System.Console.WriteLine("Player 2 Wins!! Congrats, " + player2.PlayersName);
+                Console.Clear();
+                System.Console.WriteLine("Player 2 has defeated their opponent! Yo-Ho, " + player2.PlayersName + "! A Pirate's Life for thee...\n");
+                System.Console.WriteLine("And for you, " + player1.PlayersName + ", Dead Men Tell No Tales...\n");
+                System.Console.WriteLine("Press any key to exit to the main menu.");
+                Console.ReadKey();
+                Console.Clear();
                 return player1.Health;
             }
             else if(player2.Health <= 0)
             {
-                System.Console.WriteLine("Player 1 Wins!! Congrats, " + player1.PlayersName);
+                Console.Clear();
+                System.Console.WriteLine("Player 1 has defeated their opponent! Yo-Ho, " + player1.PlayersName + ". A Pirate's Life for thee...\n");
+                System.Console.WriteLine("And for you, " + player2.PlayersName + ", Dead Men Tell No Tales...\n");
+                System.Console.WriteLine("Press any key to exit to the main menu.");
+                Console.ReadKey();
+                Console.Clear();
                 return player2.Health;
             }
             return -2.0;

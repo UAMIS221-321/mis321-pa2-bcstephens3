@@ -10,35 +10,41 @@ namespace mis321_pa2_bcstephens3.Interphases
         {
             if(determineTurn == 1)
             {
-                if(player2.Name == "Will Turner")
+                if(player1.AttackStrength < player2.DefensePower)
                 {
-                    System.Console.WriteLine("Advantage Awarded: Jack Sparrow beats Will Turner");
-                    player2.Health = player2.Health - ((player1.AttackStrength - player2.DefensePower) * 1.2);
+                    player2.Health = player2.Health -1;
                 }
                 else
                 {
-                    player2.Health = player2.Health - ((player1.AttackStrength - player2.DefensePower) * 1);
-                }
-                if(player2.Health > 100)
-                {
-                    player2.Health = 100;
+                    if(player2.Name == "Will Turner")
+                    {
+                        System.Console.WriteLine("Advantage Awarded: Jack Sparrow beats Will Turner");
+                        player2.Health = player2.Health - ((player1.AttackStrength - player2.DefensePower) * 1.2);
+                    }
+                    else
+                    {
+                        player2.Health = player2.Health - ((player1.AttackStrength - player2.DefensePower) * 1);
+                    }
                 }
                 return player2.Health;
             }
             else if(determineTurn == 2)
             {
-                if(player1.Name == "Will Turner")
+                if(player2.AttackStrength < player1.DefensePower)
                 {
-                    System.Console.WriteLine("Advantage Awarded: Jack Sparrow beats Will Turner");
-                    player1.Health = player1.Health - ((player2.AttackStrength - player1.DefensePower) * 1.2);
+                    player1.Health = player1.Health -1;
                 }
                 else
                 {
-                    player1.Health = player1.Health - ((player2.AttackStrength - player1.DefensePower) * 1);
-                }
-                if(player1.Health > 100)
-                {
-                    player1.Health = 100;
+                    if(player1.Name == "Will Turner")
+                    {
+                        System.Console.WriteLine("Advantage Awarded: Jack Sparrow beats Will Turner");
+                        player1.Health = player1.Health - ((player2.AttackStrength - player1.DefensePower) * 1.2);
+                    }
+                    else
+                    {
+                        player1.Health = player1.Health - ((player2.AttackStrength - player1.DefensePower) * 1); 
+                    }
                 }
                 return player1.Health;
             }
