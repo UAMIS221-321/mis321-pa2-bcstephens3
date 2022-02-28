@@ -6,7 +6,7 @@ namespace mis321_pa2_bcstephens3.Interphases
     {
         public static Character ChooseCharacter()
         {
-            System.Console.WriteLine("Select one of the following characters: \n1. Jack Sparrow \n2. Will Turner \n3. Davy Jones");
+            System.Console.WriteLine("Select one of the following characters: \n1. Jack Sparrow \n2. Will Turner \n3. Davy Jones \n4. Captain Barbossa \n5. Prison Dog \n6. Elizabeth Swann");
             string plCharMenuChoice = Console.ReadLine();
             string plCharChoice = "";
             bool plBool = false;
@@ -22,6 +22,18 @@ namespace mis321_pa2_bcstephens3.Interphases
             if(plCharChoice == "Davy Jones")
             {
                 return new DavyJones();
+            }
+            if(plCharChoice == "Captain Barbossa")
+            {
+                return new CaptainBarbossa();
+            }
+            if(plCharChoice == "Prison Dog")
+            {
+                return new PrisonDog();
+            }
+            if(plCharChoice == "Elizabeth Swann")
+            {
+                return new ElizabethSwann();
             }
             else
             {
@@ -48,116 +60,30 @@ namespace mis321_pa2_bcstephens3.Interphases
                     plCharChoice = "Davy Jones";
                     plBool = true;
                 }
+                else if(plCharMenuChoice == "4")
+                {
+                    plCharChoice = "Captain Barbossa";
+                    plBool = true;
+                }
+                else if(plCharMenuChoice == "5")
+                {
+                    plCharChoice = "Prison Dog";
+                    plBool = true;
+                }
+                else if(plCharMenuChoice == "6")
+                {
+                    plCharChoice = "Elizabeth Swann";
+                    plBool = true;
+                }
                 else
                 {
                     System.Console.WriteLine("Not a valid character, matey. Try again.");
-                    System.Console.WriteLine("Select one of the following characters: \n1. Jack Sparrow \n2. Will Turner \n3. Davy Jones");
+                    System.Console.WriteLine("Select one of the following characters: \n1. Jack Sparrow \n2. Will Turner \n3. Davy Jones \n4. Captain Barbossa \n5. Prison Dog \n6. Elizabeth Swann");
                     plCharMenuChoice = Console.ReadLine();
                 }   
             }
             return plCharChoice;
         }
-        // public static void ChooseP1(ref Character player1)
-        // {
-        //     System.Console.WriteLine("Select one of the following characters: \n1. Jack Sparrow \n2. Will Turner \n3. Davy Jones");
-        //     string plCharMenuChoice = Console.ReadLine();
-        //     string plCharChoice = "";
-        //     bool plBool = false;
-        //     p1CharacterSelect(plCharMenuChoice, ref plCharChoice, plBool);
-            
-        //     if(plCharChoice == "Jack Sparrow")
-        //     {
-        //         player1 = new JackSparrow();
-        //     }
-        //     if(plCharChoice == "Will Turner")
-        //     {
-        //         player1 = new WillTurner();
-        //     }
-        //     if(plCharChoice == "Davy Jones")
-        //     {
-        //         player1 = new DavyJones();
-        //     }
-        // }
-        // public static string p1CharacterSelect(string plCharMenuChoice, ref string plCharChoice, bool plBool)
-        // {
-        //     while(plBool == false)
-        //     {
-        //         if(plCharMenuChoice == "1")
-        //         {
-        //             plCharChoice = "Jack Sparrow";
-        //             plBool = true;
-        //         }
-        //         else if(plCharMenuChoice == "2")
-        //         {
-        //             plCharChoice = "Will Turner";
-        //             plBool = true;
-        //         }
-        //         else if(plCharMenuChoice == "3")
-        //         {
-        //             plCharChoice = "Davy Jones";
-        //             plBool = true;
-        //         }
-        //         else
-        //         {
-        //             System.Console.WriteLine("Not a valid character, matey. Try again.");
-        //             System.Console.WriteLine("Select one of the following characters: \n1. Jack Sparrow \n2. Will Turner \n3. Davy Jones");
-        //             plCharMenuChoice = Console.ReadLine();
-        //         }   
-        //     }
-        //     return plCharChoice;
-        // }
-
-        
-
-        // public static void ChooseP2(ref Character player2)
-        // {
-        //     System.Console.WriteLine("Select one of the following characters: \n1. Jack Sparrow \n2. Will Turner \n3. Davy Jones");
-        //     string p2CharMenuChoice = Console.ReadLine();
-        //     string p2CharChoice = "";
-        //     bool p2bool = false;
-        //     p1CharacterSelect(p2CharMenuChoice, ref p2CharChoice, p2bool);
-            
-        //     if(p2CharChoice == "Jack Sparrow")
-        //     {
-        //         player2 = new JackSparrow();
-        //     }
-        //     if(p2CharChoice == "Will Turner")
-        //     {
-        //         player2 = new WillTurner();
-        //     }
-        //     if(p2CharChoice == "Davy Jones")
-        //     {
-        //         player2 = new DavyJones();
-        //     }
-        // }
-        // public static string p2CharacterSelect(string p2CharMenuChoice, ref string p2CharChoice, bool p2bool)
-        // {
-        //     while(p2bool == false)
-        //     {
-        //         if(p2CharMenuChoice == "1")
-        //         {
-        //             p2CharChoice = "Jack Sparrow";
-        //             p2bool = true;
-        //         }
-        //         else if(p2CharMenuChoice == "2")
-        //         {
-        //             p2CharChoice = "Will Turner";
-        //             p2bool = true;
-        //         }
-        //         else if(p2CharMenuChoice == "3")
-        //         {
-        //             p2CharChoice = "Davy Jones";
-        //             p2bool = true;
-        //         }
-        //         else
-        //         {
-        //             System.Console.WriteLine("Not a valid character, matey. Try again.");
-        //             System.Console.WriteLine("Select one of the following characters: \n1. Jack Sparrow \n2. Will Turner \n3. Davy Jones");
-        //             p2CharMenuChoice = Console.ReadLine();
-        //         }   
-        //     }
-        //     return p2CharChoice;
-        // }
     }
 }
 

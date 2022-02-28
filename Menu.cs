@@ -7,7 +7,7 @@ namespace mis321_pa2_bcstephens3.Interphases
         public static void MainMenu()
         {
             System.Console.WriteLine("Yo-Ho, Mateys! Welcome to Pirates of the Caribbean, At World's End!\n");
-            System.Console.WriteLine("If ye brave, choose one of the following integers to play: \n\n1. Multiplayer (User vs. User)\n2. Singleplayer (User vs. AI)\n3.Exit");
+            System.Console.WriteLine("If ye brave, choose one of the following integers to play: \n\n1. Multiplayer (User vs. User)\n2. Singleplayer (User vs. AI)\n3. Exit");
             System.Console.WriteLine();
             string userInput = Console.ReadLine();
             //Character[] characters = new Character[50];
@@ -27,7 +27,7 @@ namespace mis321_pa2_bcstephens3.Interphases
                     System.Console.WriteLine(" ");
                     System.Console.WriteLine("Singleplayer (User vs. AI)\n");
                 }
-                System.Console.WriteLine("If ye brave, choose one of the following integers to play: \n\n1. Multiplayer (User vs. User)\n2. Singleplayer (User vs. AI)\n3.Exit");
+                System.Console.WriteLine("If ye brave, choose one of the following integers to play: \n\n1. Multiplayer (User vs. User)\n2. Singleplayer (User vs. AI)\n3. Exit");
                 userInput = Console.ReadLine();
             }
         }

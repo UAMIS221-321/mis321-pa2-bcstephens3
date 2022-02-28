@@ -10,6 +10,12 @@ namespace mis321_pa2_bcstephens3
             int number = randomNumber.Next(1,3);
             return number;
         }
+        public static int AdvantageHelper()
+        {
+            Random randomNumber = new Random();
+            int number = randomNumber.Next(1,21);
+            return number;
+        }
         
     }
 }
