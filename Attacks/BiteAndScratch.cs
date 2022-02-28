@@ -1,8 +1,8 @@
 namespace mis321_pa2_bcstephens3.Interphases
 {
-    public class BiteAndScatch  : IAttack
+    public class BiteAndScatch  : IAttack //EXTRA Attack and underdog advantage calculation
     {
-        public void Attack()
+        public void Attack() //EXTRA Attack
         {
             System.Console.WriteLine("You are using the bite and scratch attack.");
         }
@@ -12,7 +12,7 @@ namespace mis321_pa2_bcstephens3.Interphases
             {
                 if(player1.AttackStrength <= player2.DefensePower)
                 {
-                    if(player2.Name == "Elizabeth Swann")
+                    if(player2.Name == "Elizabeth Swann") //EXTRA: underdog advantage calculation
                     {
                         System.Console.WriteLine("Advantage Awarded: Prison Dog beats Elizabeth Swann");
                         int advBoost = RandomUtility.AdvantageHelper();

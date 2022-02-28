@@ -2,7 +2,7 @@ namespace mis321_pa2_bcstephens3.Interphases
 {
     public class PrisonDog : Character
     {
-        public PrisonDog()
+        public PrisonDog() //EXTRA Character
         {
             Name = "Prison Dog";
             attackBehavior = new BiteAndScatch();

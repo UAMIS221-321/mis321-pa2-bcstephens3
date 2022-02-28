@@ -2,7 +2,7 @@ namespace mis321_pa2_bcstephens3.Interphases
 {
     public class ElizabethSwann : Character
     {
-        public ElizabethSwann()
+        public ElizabethSwann() //EXTRA Character
         {
             Name = "Elizabeth Swann";
             attackBehavior = new FlintlockPistol();

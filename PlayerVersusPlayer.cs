@@ -2,7 +2,7 @@ using System;
 using System.IO;
 namespace mis321_pa2_bcstephens3.Interphases
 {
-    public class PlayerVersusPlayer
+    public class PlayerVersusPlayer //EXTRAS: three extra characters, three additional attacks, underdog adavantage calculation
     {
         public static void Gameplay()
         {   

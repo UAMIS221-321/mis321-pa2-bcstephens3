@@ -2,7 +2,7 @@ namespace mis321_pa2_bcstephens3.Interphases
 {
     public class CannonFire  : IAttack
     {
-        public void Attack()
+        public void Attack() //EXTRA: underdog advantage calculation
         {
             System.Console.WriteLine("You are using the cannon fire attack.");
         }
@@ -12,7 +12,7 @@ namespace mis321_pa2_bcstephens3.Interphases
             {
                 if(player1.AttackStrength <= player2.DefensePower)
                 {
-                    if(player2.Name == "Jack Sparrow")
+                    if(player2.Name == "Jack Sparrow") //EXTRA: underdog advantage calculation
                     {
                         System.Console.WriteLine("Advantage Awarded: Davy Jones beats Jack Sparrow");
                         int advBoost = RandomUtility.AdvantageHelper();

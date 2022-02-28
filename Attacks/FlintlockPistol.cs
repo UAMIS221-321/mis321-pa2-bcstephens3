@@ -1,8 +1,8 @@
 namespace mis321_pa2_bcstephens3.Interphases
 {
-    public class FlintlockPistol  : IAttack
+    public class FlintlockPistol  : IAttack //EXTRA Attack and underdog advantage calculation
     {
-        public void Attack()
+        public void Attack() //EXTRA Attack
         {
             System.Console.WriteLine("You are using the flintlock pistol attack.");
         } 
@@ -12,7 +12,7 @@ namespace mis321_pa2_bcstephens3.Interphases
             {
                 if(player1.AttackStrength <= player2.DefensePower)
                 {
-                    if(player2.Name == "Captain Barbossa")
+                    if(player2.Name == "Captain Barbossa") //EXTRA: underdog advantage calculation
                     {
                         System.Console.WriteLine("Advantage Awarded: Elizabeth Swann beats Captain Barbossa");
                         int advBoost = RandomUtility.AdvantageHelper();

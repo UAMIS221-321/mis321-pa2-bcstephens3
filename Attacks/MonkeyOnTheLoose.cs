@@ -1,8 +1,8 @@
 namespace mis321_pa2_bcstephens3.Interphases
 {
-    public class MonkeyOnTheLoose  : IAttack
+    public class MonkeyOnTheLoose  : IAttack //EXTRA Attack and underdog advantage calculation
     {
-        public void Attack()
+        public void Attack() //EXTRA Attack
         {
             System.Console.WriteLine("You are using the ravenous pet monkey attack.");
         }
@@ -12,7 +12,7 @@ namespace mis321_pa2_bcstephens3.Interphases
             {
                 if(player1.AttackStrength <= player2.DefensePower)
                 {
-                    if(player2.Name == "Prison Dog")
+                    if(player2.Name == "Prison Dog") //EXTRA: underdog advantage calculation
                     {
                         System.Console.WriteLine("Advantage Awarded: Captain Barbossa beats Prison Dog");
                         int advBoost = RandomUtility.AdvantageHelper();

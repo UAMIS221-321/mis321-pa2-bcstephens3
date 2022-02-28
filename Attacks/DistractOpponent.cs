@@ -2,7 +2,7 @@ namespace mis321_pa2_bcstephens3.Interphases
 {
     public class DistractOpponent : IAttack
     {
-        public void Attack()
+        public void Attack() //EXTRA: underdog advantage calculation
         {
             System.Console.WriteLine("You are using the distraction attack.");
         }
@@ -12,7 +12,7 @@ namespace mis321_pa2_bcstephens3.Interphases
             {
                 if(player1.AttackStrength <= player2.DefensePower)
                 {
-                    if(player2.Name == "Will Turner")
+                    if(player2.Name == "Will Turner") //EXTRA: underdog advantage calculation
                     {
                         System.Console.WriteLine("Advantage Awarded: Jack Sparrow beats Will Turner");
                         int advBoost = RandomUtility.AdvantageHelper();
