@@ -2,7 +2,7 @@ using System;
 using System.IO;
 namespace mis321_pa2_bcstephens3.Interphases
 {
-    public class PlayerVersusPlayer //EXTRAS: three extra characters, three additional attacks, underdog adavantage calculation
+    public class PlayerVersusPlayer //EXTRAS: three extra characters, three additional attacks, underdog adavantage calculation, game art/color, character bios
     {
         public static void Gameplay()
         {   
@@ -130,6 +130,7 @@ namespace mis321_pa2_bcstephens3.Interphases
             if(player1.Health <= 0)
             {
                 Console.Clear();
+                SkullArt.TheRedCoolSkullArt();
                 System.Console.WriteLine("Player 2 has defeated their opponent! Yo-Ho, " + player2.PlayersName + "! A Pirate's Life for thee...\n");
                 System.Console.WriteLine("And for you, " + player1.PlayersName + ", Dead Men Tell No Tales...\n");
                 System.Console.WriteLine("Press any key to exit to the main menu.");
@@ -140,6 +141,7 @@ namespace mis321_pa2_bcstephens3.Interphases
             else if(player2.Health <= 0)
             {
                 Console.Clear();
+                SkullArt.TheRedCoolSkullArt();
                 System.Console.WriteLine("Player 1 has defeated their opponent! Yo-Ho, " + player1.PlayersName + ". A Pirate's Life for thee...\n");
                 System.Console.WriteLine("And for you, " + player2.PlayersName + ", Dead Men Tell No Tales...\n");
                 System.Console.WriteLine("Press any key to exit to the main menu.");

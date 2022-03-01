@@ -5,7 +5,7 @@ namespace mis321_pa2_bcstephens3.Interphases
     {
         static void Main(string[] args)
         {
-            Menu.MainMenu(); //EXTRAS: three extra characters, three additional attacks, underdog adavantage calculation
+            Menu.MainMenu(); //EXTRAS: three extra characters, three additional attacks, underdog adavantage calculation, game art/color, character bios
         }
     }
 }
